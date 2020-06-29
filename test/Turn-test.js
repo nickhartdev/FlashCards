@@ -41,4 +41,11 @@ describe('Turn', function() {
 
         expect(turn.returnCard()).to.equal(card);
     });
+
+    it.skip('should be able to tell you if you get the answer wrong', function() {
+        const card = new Card(1, 'What is Nick\'s cat\'s name?', ['Toby', 'Hobbes', 'Ollie'], 'Hobbes');
+        const turn = new Turn('Toby', card);
+
+        expect(turn.evaluateGuess()).to.equal(false);
+    });
 });
