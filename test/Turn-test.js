@@ -16,10 +16,8 @@ describe('Turn', function() {
         expect(turn).to.be.an.instanceOf(Turn);
     });
 
-    // it.skip('should be able to return an answer', function() {
-    //     const card = new Card(1, 'What is Nick\'s cat\'s name?', ['Toby', 'Hobbes', 'Ollie'], 'Hobbes');
-    //     const turn = new Turn('Hobbes', card);
-
-    //     expect(turn.answer).to.deep.equal(card.answers[2]);
-    // });
+    it.skip('should include an answer', function() {
+        const turn = new Turn('Answer');    
+        expect(turn.answer).to.equal('Answer');
+    });
 });
