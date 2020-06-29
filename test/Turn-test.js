@@ -20,4 +20,11 @@ describe('Turn', function() {
         const turn = new Turn('Answer');    
         expect(turn.answer).to.equal('Answer');
     });
+
+    it.skip('should include an instance of Card', function() {
+        const card = new Card();
+        const turn = new Turn('Answer', card);
+
+        expect(turn.card).to.equal(card);
+    });
 });
