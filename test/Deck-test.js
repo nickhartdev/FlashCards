@@ -16,4 +16,13 @@ describe('Deck', function() {
         expect(deck).to.be.an.instanceOf(Deck);
     });
 
+    it('should have cards in it', function() {
+        const card1 = new Card();
+        const card2 = new Card();
+        const card3 = new Card();
+        const deck = new Deck([card1, card2, card3]);
+
+        expect(deck.cards).to.deep.equal([card1, card2, card3]);
+    });
+
 });
