@@ -61,5 +61,12 @@ describe('Turn', function() {
         const turn = new Turn('Toby', card);
 
         expect(turn.giveFeedback()).to.equal('incorrect!');
+    });
+
+    it.skip('should be able to return the correct response if your guess is right', function() {
+        const card = new Card(1, 'What is Nick\'s cat\'s name?', ['Toby', 'Hobbes', 'Ollie'], 'Hobbes');
+        const turn = new Turn('Hobbes', card);
+
+        expect(turn.giveFeedback()).to.equal('correct!');
     })
 });
