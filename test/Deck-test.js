@@ -1,8 +1,8 @@
 const chai = require('chai');
 const expect = chai.expect;
 
-const Deck = require('../src/Deck');
 const Card = require('../src/Card');
+const Deck = require('../src/Deck');
 
 describe('Deck', function() {
 
@@ -16,7 +16,7 @@ describe('Deck', function() {
         expect(deck).to.be.an.instanceOf(Deck);
     });
 
-    it('should have cards in it', function() {
+    it('should contain cards', function() {
         const card1 = new Card();
         const card2 = new Card();
         const card3 = new Card();
@@ -25,4 +25,12 @@ describe('Deck', function() {
         expect(deck.cards).to.deep.equal([card1, card2, card3]);
     });
 
+    it('should be able to say how many cards it has', function() {
+        const card1 = new Card();
+        const card2 = new Card();
+        const card3 = new Card();
+        const deck = new Deck([card1, card2, card3]);
+
+        expect(deck.countCards).to.equal(3);
+    }) 
 });
