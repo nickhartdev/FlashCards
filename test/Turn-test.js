@@ -33,5 +33,12 @@ describe('Turn', function() {
         const turn = new Turn('Answer', card);
 
         expect(turn.returnGuess()).to.equal('Answer');
-    })
+    });
+
+    it.skip('should be able to return the card', function() {
+        const card = new Card();
+        const turn = new Turn('Answer', card);
+
+        expect(turn.returnCard()).to.equal(card);
+    });
 });
