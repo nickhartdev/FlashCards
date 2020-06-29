@@ -27,4 +27,11 @@ describe('Turn', function() {
 
         expect(turn.card).to.equal(card);
     });
+
+    it.skip('should be able to return a guess', function() {
+        const card = new Card();
+        const turn = new Turn('Answer', card);
+
+        expect(turn.returnGuess()).to.equal('Answer');
+    })
 });
