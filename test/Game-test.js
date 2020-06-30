@@ -58,12 +58,12 @@ describe('Game', function() {
         expect(game.round).to.be.an.instanceOf(Round);
     });
 
-    it('should be able to invoke printMessage', function() {
+    it.skip('should be able to invoke printMessage', function() {
         const game = new Game();
         expect(game.printMessage()).to.exist;
     });
 
-    it('should be able to invoke printQuestion', function() {
+    it.skip('should be able to invoke printQuestion', function() {
         const game = new Game();
         expect(game.printQuestion()).to.exist;
     });
