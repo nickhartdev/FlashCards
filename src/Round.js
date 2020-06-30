@@ -12,6 +12,7 @@ class Round {
 
         this.incrementTurns();
         this.moveToNextCard();
+        this.checkAnswer(currentTurn.answer, currentTurn.card);
         return currentTurn.giveFeedback();
     }
 
@@ -25,6 +26,12 @@ class Round {
 
     moveToNextCard() {
         this.deck.cards.shift();
+    }
+
+    checkAnswer(answer, card) {
+        if (answer !== card.correctAnswer) {
+            this.incorrectGuesses.push(answer);
+        }
     }
 }
 

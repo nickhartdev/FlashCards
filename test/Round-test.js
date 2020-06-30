@@ -16,6 +16,7 @@ describe('Round', function() {
     afterEach(function() {
         round.turns = 0;
         deck.cards = [card1, card2, card3];
+        round.incorrectGuesses = [];
     })
 
     it('should be a function', function() {
@@ -62,7 +63,7 @@ describe('Round', function() {
         expect(round.incorrectGuesses).to.exist;
     });
 
-    it.skip('should update the number of incorrect guesses when you guess wrong', function() {
+    it('should update the number of incorrect guesses when you guess wrong', function() {
         expect(round.incorrectGuesses).to.deep.equal([]);
         round.takeTurn('Toby');
         expect(round.incorrectGuesses).to.deep.equal(['Toby']);
