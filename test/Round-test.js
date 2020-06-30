@@ -70,4 +70,12 @@ describe('Round', function() {
 
         expect(round.calculatePercentCorrect).to.equal(66);
     });
+
+    it.skip('should return a percentage of how many guesses you got right', function () {
+        round.takeTurn('Toby');
+        round.takeTurn('San Antonio');
+        round.takeTurn('Blue Stars');
+
+        expect(round.calculatePercentCorrect).to.equal(33);
+    });
 });
