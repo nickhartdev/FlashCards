@@ -25,4 +25,36 @@ describe('Round', function() {
     it.skip('should be able to return the current card in play', function() {
         expect(round.returnCurrentCard()).to.equal(card1);
     });
+
+    it.skip('should make a new turn instance every time a guess is made', function() {
+
+    });
+
+    it.skip('should update the turn count every time a guess is made', function() {
+
+    });
+
+    it.skip('should move to the next card after a guess is made', function() {
+
+    });
+
+    it.skip('should have a way of keeping track of incorrect guesses', function() {
+
+    });
+
+    it.skip('should update the number of incorrect guesses when you guess wrong', function() {
+
+    });
+
+    it.skip('should let you know when you get a question right', function() {
+
+    });
+
+    it.skip('should let you know when you get a question wrong', function() {
+
+    });
+
+    it.skip('should return a percentage of how many guesses you got right', function() {
+
+    });
 });
