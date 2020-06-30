@@ -29,7 +29,7 @@ describe('Round', function() {
         expect(round).to.be.an.instanceOf(Round);
     });
 
-    it.skip('should be able to return the current card in play', function() {
+    it('should be able to return the current card in play', function() {
         expect(round.returnCurrentCard()).to.equal(card1);
     });
 
