@@ -58,11 +58,11 @@ describe('Game', function() {
         expect(game.round).to.be.an.instanceOf(Round);
     });
 
-    it('should invoke printMessage', function() {
+    it('should be able to invoke printMessage', function() {
 
     });
 
-    it('should invoke printQuestion', function() {
+    it('should be able to invoke printQuestion', function() {
 
     });
 })
