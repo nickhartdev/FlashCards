@@ -7,19 +7,16 @@ const Card = require('../src/Card');
 
 describe('Round', function() {
 
-    let card1;
-    let card2;
-    let card3;
-    let deck;
-    let round;
+    const card1 = new Card(1, 'What is the name of Nick\'s cat?', ['Toby', 'Hobbes', 'Ollie'], 'Hobbes');
+    const card2 = new Card(2, 'Where is Ili originally from?', ['Denver', 'San Antonio', 'Austin'], 'San Antonio');
+    const card3 = new Card(3, 'Which drum corps did Nick march with?', ['Blue Devils', 'Blue Stars', 'Blue Knights'], 'Blue Knights');;
+    const deck = new Deck([card1, card2, card3]);
+    const round = new Round(deck);
 
-    beforeEach(function() {
-        card1 = new Card(1, 'What is the name of Nick\'s cat?', ['Toby', 'Hobbes', 'Ollie'], 'Hobbes');
-        card2 = new Card(2, 'Where is Ili originally from?', ['Denver', 'San Antonio', 'Austin'], 'San Antonio');
-        card3 = new Card(3, 'Which drum corps did Nick march with?', ['Blue Devils', 'Blue Stars', 'Blue Knights'], 'Blue Knights');
-        deck = new Deck([card1, card2, card3]);
-        round = new Round(deck);
-    });
+    afterEach(function() {
+        round.turns = 0;
+        deck.cards = [card1, card2, card3];
+    })
 
     it('should be a function', function() {
         expect(Round).to.be.a('function');
@@ -32,6 +29,10 @@ describe('Round', function() {
     it('should be able to return the current card in play', function() {
         expect(round.returnCurrentCard()).to.equal(card1);
     });
+
+    it.skip('should instantiate a new turn every time a guess is made', function() {
+
+    })
 
     it('should update the turn count every time a correct guess is made', function() {
         expect(round.turns).to.equal(0);
@@ -62,16 +63,16 @@ describe('Round', function() {
     });
 
     it.skip('should update the number of incorrect guesses when you guess wrong', function() {
-        expect(round.incorrectGuesses).to.deeply.equal(0);
+        expect(round.incorrectGuesses).to.deep.equal([]);
         round.takeTurn('Toby');
-        expect(round.incorrectGuesses).to.deeply.equal(1);
+        expect(round.incorrectGuesses).to.deep.equal(['Toby']);
     });
 
-    it.skip('should let you know when you get a question right', function() {
+    it('should let you know when you get a question right', function() {
         expect(round.takeTurn('Hobbes')).to.equal('correct!');
     });
 
-    it.skip('should let you know when you get a question wrong', function() {
+    it('should let you know when you get a question wrong', function() {
         expect(round.takeTurn('Ollie')).to.equal('incorrect!');
     });
 
