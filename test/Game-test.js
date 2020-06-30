@@ -32,11 +32,19 @@ describe('Game', function() {
     });
 
     it('should have cards', function() {
-        const Game = new Game();
+        const game = new Game();
+
+        game.start();
+
+        expect(Cards).to.exist;
     });
 
     it('should keep the cards in a deck', function() {
+        const game = new Game();
 
+        game.start();
+
+        expect(Deck).to.exist;
     });
 
     it('should be able to start a new round', function() {
