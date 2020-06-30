@@ -56,7 +56,7 @@ describe('Round', function() {
     });
 
     it.skip('should let you know when you get a question right', function() {
-
+        expect(round.takeTurn()).to.equal('correct!');
     });
 
     it.skip('should let you know when you get a question wrong', function() {
