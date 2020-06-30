@@ -59,10 +59,12 @@ describe('Game', function() {
     });
 
     it('should be able to invoke printMessage', function() {
-
+        const game = new Game();
+        expect(game.printMessage()).to.exist;
     });
 
     it('should be able to invoke printQuestion', function() {
-
+        const game = new Game();
+        expect(game.printQuestion()).to.exist;
     });
 })
