@@ -15,8 +15,13 @@ describe('Game', function() {
         expect(game).to.be.an.instanceOf(Game);
     });
 
-    it('should keep track of the current round', function() {
+    it.skip('should keep track of the current round', function() {
+        expect(game.currentRound).to.equal(0);
 
+        game.round.takeTurn();
+        game.round.takeTurn();
+
+        expect(game.currentRound).toEqual(2);
     });
 
     it('should start the game', function() {
