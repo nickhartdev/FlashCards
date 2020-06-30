@@ -33,15 +33,27 @@ describe('Round', function() {
         expect(round.returnCurrentCard()).to.equal(card1);
     });
 
-    it.skip('should update the turn count every time a guess is made', function() {
+    it.skip('should update the turn count every time a correct guess is made', function() {
         expect(round.turns).to.equal(0);
         round.takeTurn('Hobbes');
         expect(round.turns).to.equal(1);
     });
 
-    it.skip('should move to the next card after a guess is made', function() {
+    it.skip('should update the turn count every time an incorrect guess is made', function() {
+        expect(round.turns).to.equal(0);
+        round.takeTurn('Toby');
+        expect(round.turns).to.equal(1);
+    });
+
+    it.skip('should move to the next card after a correct guess is made', function() {
         expect(round.returnCurrentCard()).to.equal(card1);
         round.takeTurn('Hobbes');
+        expect(round.returnCurrentCard()).to.equal(card2);
+    });
+
+    it.skip('should move to the next card after an incorrect guess is made', function() {
+        expect(round.returnCurrentCard()).to.equal(card1);
+        round.takeTurn('Ollie');
         expect(round.returnCurrentCard()).to.equal(card2);
     });
 
