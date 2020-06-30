@@ -38,6 +38,10 @@ class Round {
     calculatePercentCorrect() { 
         return Math.floor(100 - (this.incorrectGuesses.length / this.numberOfCards) * 100);
     }
+
+    endRound() {
+        return `Round over! You answered ${this.calculatePercentCorrect()}% questions correctly!`;
+    }
 }
 
 module.exports = Round;
