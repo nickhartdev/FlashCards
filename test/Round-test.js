@@ -4,6 +4,7 @@ const expect = chai.expect;
 const Round = require('../src/Round');
 const Deck = require('../src/Deck');
 const Card = require('../src/Card');
+const Turn = require('../src/Turn');
 
 describe('Round', function() {
     beforeEach(function() {
@@ -26,16 +27,20 @@ describe('Round', function() {
         expect(round.returnCurrentCard()).to.equal(card1);
     });
 
-    it.skip('should make a new turn instance every time a guess is made', function() {
-
-    });
-
     it.skip('should update the turn count every time a guess is made', function() {
+        expect(round.turns).to.equal(0);
+        
+        round.takeTurn();
 
+        expect(round.turns).to.equal(1);
     });
 
     it.skip('should move to the next card after a guess is made', function() {
+        expect(round.returnCurrentCard()).to.equal(card1);
 
+        round.takeTurn();
+
+        expect(round.returnCurrentCard()).to.equal(card2);
     });
 
     it.skip('should have a way of keeping track of incorrect guesses', function() {
