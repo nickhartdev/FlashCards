@@ -36,7 +36,8 @@ describe('Game', function() {
 
         game.start();
 
-        expect(Cards).to.exist;
+        expect(game.cards).to.exist;
+        expect(game.cards).to.be.an.instanceOf(Card);
     });
 
     it('should keep the cards in a deck', function() {
@@ -44,7 +45,8 @@ describe('Game', function() {
 
         game.start();
 
-        expect(Deck).to.exist;
+        expect(game.deck).to.exist;
+        expect(game.deck).to.be.an.instanceOf(Deck);
     });
 
     it('should be able to start a new round', function() {
