@@ -57,7 +57,7 @@ describe('Round', function() {
         expect(round.returnCurrentCard()).to.equal(card2);
     });
 
-    it.skip('should have a way of keeping track of incorrect guesses', function() {
+    it('should have a way of keeping track of incorrect guesses', function() {
         expect(round.incorrectGuesses).to.exist;
     });
 
