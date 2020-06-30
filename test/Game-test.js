@@ -16,9 +16,9 @@ describe('Game', function() {
     });
 
     
-    it.skip('should start the game', function() {
+    it('should start the game', function() {
         const game = new Game();
-        expect(game.start()).to.exist();
+        expect(game.start).to.be.a('function');
     });
     
     it.skip('should have cards', function() {

@@ -4,9 +4,7 @@ const util = require('./util');
 const Round = require('./Round');
 
 class Game {
-  constructor() {
-    this.currentRound = new Round();
-  }
+  constructor() {}
 
   printMessage(deck, round) {
       console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
@@ -17,6 +15,9 @@ class Game {
       util.main(round);
   }
 
+  start() {
+    
+  }
 }
 
 module.exports = Game;
