@@ -45,13 +45,13 @@ describe('Round', function() {
         expect(round.turns).to.equal(1);
     });
 
-    it.skip('should move to the next card after a correct guess is made', function() {
+    it('should move to the next card after a correct guess is made', function() {
         expect(round.returnCurrentCard()).to.equal(card1);
         round.takeTurn('Hobbes');
         expect(round.returnCurrentCard()).to.equal(card2);
     });
 
-    it.skip('should move to the next card after an incorrect guess is made', function() {
+    it('should move to the next card after an incorrect guess is made', function() {
         expect(round.returnCurrentCard()).to.equal(card1);
         round.takeTurn('Ollie');
         expect(round.returnCurrentCard()).to.equal(card2);

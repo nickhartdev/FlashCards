@@ -10,10 +10,15 @@ class Round {
 
     takeTurn() {
         this.incrementTurns();
+        this.moveToNextCard();
     }
 
     incrementTurns() {
         this.turns++;
+    }
+
+    moveToNextCard() {
+        this.deck.cards.shift();
     }
 }
 
