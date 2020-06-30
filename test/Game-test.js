@@ -25,11 +25,11 @@ describe('Game', function() {
     });
 
     it('should start the game', function() {
-
+        expect(game.start()).to.exist();
     });
 
     it('should have cards', function() {
-
+        
     });
 
     it('should keep the cards in a deck', function() {
