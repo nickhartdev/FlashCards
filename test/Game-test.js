@@ -5,25 +5,19 @@ const Game = require('../src/Game');
 
 describe('Game', function() {
 
-    it.skip('should be a function', function() {
+    it('should be a function', function() {
         const game = new Game();
         expect(Game).to.be.a('function');
     });
 
-    it.skip('should be an instance of Game', function() {
+    it('should be an instance of Game', function() {
         const game = new Game();
         expect(game).to.be.an.instanceOf(Game);
     });
 
     it.skip('should keep track of the current round', function() {
         const game = new Game();
-
-        expect(game.currentRound).to.equal(0);
-
-        game.round.takeTurn();
-        game.round.takeTurn();
-
-        expect(game.currentRound).toEqual(2);
+        expect(game.currentRound).to.be.an.instanceOf(Round);
     });
 
     it.skip('should start the game', function() {
