@@ -56,14 +56,18 @@ describe('Round', function() {
     });
 
     it.skip('should let you know when you get a question right', function() {
-        expect(round.takeTurn()).to.equal('correct!');
+        expect(round.takeTurn('Hobbes')).to.equal('correct!');
     });
 
     it.skip('should let you know when you get a question wrong', function() {
-
+        expect(round.takeTurn('Ollie').to.equal('incorrect!');
     });
 
-    it.skip('should return a percentage of how many guesses you got right', function() {
+    it.skip('should return a percentage of how many guesses you got right', function () {
+        round.takeTurn('Hobbes');
+        round.takeTurn('San Antonio');
+        round.takeTurn('Blue Devils');
 
+        expect(round.calculatePercentCorrect).to.equal(66);
     });
 });
