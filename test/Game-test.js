@@ -5,12 +5,14 @@ const game = require('../src/Game');
 
 describe('Game', function() {
 
-    it('should be a function', function() {
+    const game = new Game();
 
+    it.skip('should be a function', function() {
+        expect(Game).to.be.a('function');
     });
 
-    it('should be an instance of Game', function() {
-
+    it.skip('should be an instance of Game', function() {
+        expect(game).to.be.an.instanceOf(Game);
     });
 
     it('should keep track of the current round', function() {
