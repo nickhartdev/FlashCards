@@ -15,6 +15,10 @@ describe('Game', function() {
         expect(game).to.be.an.instanceOf(Game);
     });
 
+    it.skip('should keep track of the current round', function () {
+        const game = new Game();
+        expect(game.currentRound).to.be.an.instanceOf(Round);
+    });
     
     it('should start the game', function() {
         const game = new Game();
@@ -46,11 +50,6 @@ describe('Game', function() {
 
         expect(game.round).to.exist;
         expect(game.round).to.be.an.instanceOf(Round);
-    });
-
-    it.skip('should keep track of the current round', function () {
-        const game = new Game();
-        expect(game.currentRound).to.be.an.instanceOf(Round);
     });
 
     it.skip('should be able to invoke printMessage', function() {
