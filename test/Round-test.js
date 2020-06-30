@@ -92,4 +92,20 @@ describe('Round', function() {
 
         expect(round.calculatePercentCorrect).to.equal(33);
     });
+
+    it.skip('should tell you when the round\'s over when you go through all of the cards', function() {
+        round.takeTurn('Toby');
+        round.takeTurn('San Antonio');
+        round.takeTurn('Blue Stars');
+
+        expect(round.endRound()).to.include('Round over!');
+    });
+
+    it.skip('should tell you the percentage of questions you got right when the round\'s over', function () {
+        round.takeTurn('Toby');
+        round.takeTurn('San Antonio');
+        round.takeTurn('Blue Stars');
+
+        expect(round.endRound()).to.include('33');
+    });
 });
