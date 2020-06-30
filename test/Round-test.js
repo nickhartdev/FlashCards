@@ -30,8 +30,8 @@ describe('Round', function() {
         expect(round.returnCurrentCard()).to.equal(card1);
     });
 
-    it.skip('should instantiate a new turn every time a guess is made', function() {
-
+    it('should instantiate a new turn every time a guess is made', function() {
+        expect(round.takeTurn('Hobbes')).to.equal('correct!');
     })
 
     it('should update the turn count every time a correct guess is made', function() {
