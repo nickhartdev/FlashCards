@@ -9,6 +9,10 @@ class Round {
     }
 
     takeTurn() {
+        this.incrementTurns();
+    }
+
+    incrementTurns() {
         this.turns++;
     }
 }
