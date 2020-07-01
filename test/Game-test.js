@@ -17,7 +17,11 @@ describe('Game', function() {
 
     it('should have a way of keeping track of the current round', function() {
         const game = new Game();
-
         expect(game.currentRound).to.exist;
+    });
+
+    it('should have a way to start', function() {
+        const game = new Game();
+        expect(game.start).to.be.a('function');
     });
 })

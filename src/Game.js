@@ -10,6 +10,10 @@ class Game {
     this.currentRound = 'placeHolder';
   }
 
+  start() {
+    
+  }
+
   printMessage(deck, round) {
     console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
 -----------------------------------------------------------------------`)
