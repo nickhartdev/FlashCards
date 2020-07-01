@@ -6,8 +6,7 @@ const Deck = require('./Deck');
 const Card = require('./Card');
 
 class Game {
-  constructor() 
-};
+  constructor() {}
 
   printMessage(deck, round) {
     console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
