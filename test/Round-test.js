@@ -85,14 +85,6 @@ describe('Round', function() {
         expect(round.calculatePercentCorrect()).to.equal(66);
     });
 
-    it('should return a percentage of how many guesses you got right with a different set of answers', function () {
-        round.takeTurn('Toby');
-        round.takeTurn('San Antonio');
-        round.takeTurn('Blue Stars');
-
-        expect(round.calculatePercentCorrect()).to.equal(33);
-    });
-
     it('should tell you when the round\'s over when you go through all of the cards', function() {
         round.takeTurn('Toby');
         round.takeTurn('San Antonio');

@@ -11,7 +11,15 @@ class Game {
   }
 
   printQuestion(round) {
+<<<<<<< Updated upstream
       util.main(round);
+=======
+    util.main(round);
+  }
+
+  start() {
+
+>>>>>>> Stashed changes
   }
 }
 
