@@ -33,7 +33,7 @@ describe('Round', function() {
         expect(round.takeTurn('Hobbes')).to.equal('correct!');
     })
 
-    it.skip('should update the turn count every time a correct guess is made', function() {
+    it('should update the turn count every time a correct guess is made', function() {
         expect(round.turns).to.equal(0);
 
         round.takeTurn('Hobbes');
@@ -41,7 +41,7 @@ describe('Round', function() {
         expect(round.turns).to.equal(1);
     });
 
-    it.skip('should update the turn count every time an incorrect guess is made', function() {
+    it('should update the turn count every time an incorrect guess is made', function() {
         expect(round.turns).to.equal(0);
 
         round.takeTurn('Toby');
@@ -49,7 +49,7 @@ describe('Round', function() {
         expect(round.turns).to.equal(1);
     });
 
-    it.skip('should move to the next card after a correct guess is made', function() {
+    it('should move to the next card after a correct guess is made', function() {
         expect(round.returnCurrentCard()).to.equal(card1);
 
         round.takeTurn('Hobbes');
@@ -57,7 +57,7 @@ describe('Round', function() {
         expect(round.returnCurrentCard()).to.equal(card2);
     });
 
-    it.skip('should move to the next card after an incorrect guess is made', function() {
+    it('should move to the next card after an incorrect guess is made', function() {
         expect(round.returnCurrentCard()).to.equal(card1);
 
         round.takeTurn('Ollie');
@@ -65,27 +65,27 @@ describe('Round', function() {
         expect(round.returnCurrentCard()).to.equal(card2);
     });
 
-    it.skip('should have a way of keeping track of incorrect guesses', function() {
+    it('should have a way of keeping track of incorrect guesses', function() {
         expect(round.incorrectGuesses).to.exist;
     });
 
-    it.skip('should update the number of incorrect guesses when you guess wrong', function() {
+    it('should update the number of incorrect guesses when you guess wrong', function() {
         expect(round.incorrectGuesses).to.deep.equal([]);
 
         round.takeTurn('Toby');
-        
+
         expect(round.incorrectGuesses).to.deep.equal(['Toby']);
     });
 
-    it.skip('should let you know when you get a question right', function() {
+    it('should let you know when you get a question right', function() {
         expect(round.takeTurn('Hobbes')).to.equal('correct!');
     });
 
-    it.skip('should let you know when you get a question wrong', function() {
+    it('should let you know when you get a question wrong', function() {
         expect(round.takeTurn('Ollie')).to.equal('incorrect!');
     });
 
-    it.skip('should return a percentage of how many guesses you got right', function () {
+    it('should return a percentage of how many guesses you got right', function () {
         round.takeTurn('Hobbes');
         round.takeTurn('San Antonio');
         round.takeTurn('Blue Devils');
