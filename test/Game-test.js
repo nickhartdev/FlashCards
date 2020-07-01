@@ -43,5 +43,13 @@ describe('Game', function() {
         const deck = game.createDeck(cards);
 
         expect(game.startNewRound(deck)).to.be.an('object');
-    })
+    });
+
+    it('should have a currentRound property that returns the current round', function() {
+        const game = new Game();
+        const cards = game.generateCards();
+        const deck = game.createDeck(cards);
+
+        expect(game.currentRound).to.deep.equal(game.startNewRound(deck));
+    });
 })
