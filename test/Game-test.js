@@ -24,4 +24,24 @@ describe('Game', function() {
         const game = new Game();
         expect(game.start).to.be.a('function');
     });
+
+    it('should create an array of cards when it starts', function() {
+        const game = new Game();
+        expect(game.generateCards()).to.be.an('array');
+    });
+
+    it('should store the array of cards in a deck when it starts', function() {
+        const game = new Game();
+        const cards = game.generateCards();
+
+        expect(game.createDeck(cards)).to.be.an('object');
+    });
+
+    it('should create a new Round instance using the Deck', function() {
+        const game = new Game();
+        const cards = game.generateCards();
+        const deck = game.createDeck(cards);
+
+        expect(game.startNewRound(deck)).to.be.an('object');
+    })
 })
