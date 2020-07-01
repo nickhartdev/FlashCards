@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 const chai = require('Chai');
 const expect = chai.expect;
 
@@ -63,4 +61,3 @@ describe('Game', function() {
         expect(game.printQuestion()).to.exist;
     });
 })
->>>>>>> Stashed changes
