@@ -4,6 +4,7 @@ const expect = chai.expect;
 const Game = require('../src/Game');
 const Card = require('../src/Card');
 const Deck = require('../src/Deck');
+const Round = require('../src/Round');
 
 describe('Game', function() {
 
@@ -48,6 +49,7 @@ describe('Game', function() {
         const deck = game.createDeck(cards);
 
         expect(game.startNewRound(deck)).to.be.an('object');
+        expect(game.startNewRound(deck)).to.be.an.instanceOf(Round);
     });
 
     it('should have a currentRound property that returns the current round', function() {
