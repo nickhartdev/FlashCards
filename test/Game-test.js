@@ -3,6 +3,7 @@ const expect = chai.expect;
 
 const Game = require('../src/Game');
 const Card = require('../src/Card');
+const Deck = require('../src/Deck');
 
 describe('Game', function() {
 
@@ -38,6 +39,7 @@ describe('Game', function() {
         const cards = game.generateCards();
 
         expect(game.createDeck(cards)).to.be.an('object');
+        expect(game.createDeck(cards)).to.be.an.instanceOf(Deck);
     });
 
     it('should create a new Round instance using the Deck', function() {
