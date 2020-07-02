@@ -2,6 +2,7 @@ const chai = require('Chai');
 const expect = chai.expect;
 
 const Game = require('../src/Game');
+const Card = require('../src/Card');
 
 describe('Game', function() {
 
@@ -27,7 +28,9 @@ describe('Game', function() {
 
     it('should create an array of cards when it starts', function() {
         const game = new Game();
+
         expect(game.generateCards()).to.be.an('array');
+        expect(game.generateCards()[0]).to.be.an.instanceOf(Card);
     });
 
     it('should store the array of cards in a deck when it starts', function() {

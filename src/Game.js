@@ -30,7 +30,11 @@ class Game {
   }
 
   generateCards() {
-    return prototypeQuestions;
+    const cards = prototypeQuestions.map(question =>  {
+      return new Card(question.id, question.question, question.answers, question.correctAnswer);
+    });
+
+    return cards;
   }
 
   createDeck(cards) {
