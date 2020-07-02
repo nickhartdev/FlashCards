@@ -25,7 +25,7 @@ describe('Turn', function() {
         const card = new Card();
         const turn = new Turn('Answer', card);
 
-        expect(turn.card).to.equal(card);
+        expect(turn.card).to.be.an.instanceOf(Card);
     });
 
     it('should be able to return a guess', function() {
