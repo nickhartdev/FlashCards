@@ -1,24 +1,24 @@
 class Turn {
-    constructor(answer, card) {
-        this.answer = answer;
-        this.card = card;
-    }
+  constructor(answer, card) {
+    this.answer = answer;
+    this.card = card;
+  }
 
-    returnGuess() {
-        return this.answer;
-    }
+  returnGuess() {
+    return this.answer;
+  }
 
-    returnCard() {
-        return this.card;
-    }
+  returnCard() {
+    return this.card;
+  }
 
-    evaluateGuess() {
-        return this.answer === this.card.correctAnswer ? true : false;
-    }
+  evaluateGuess() {
+    return this.answer === this.card.correctAnswer ? true : false;
+  }
 
-    giveFeedback() {
-        return this.evaluateGuess() === true ? 'correct!' : 'incorrect!';
-    }
+  giveFeedback() {
+    return this.evaluateGuess() === true ? 'correct!' : 'incorrect!';
+  }
 }
 
 module.exports = Turn;
