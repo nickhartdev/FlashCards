@@ -53,10 +53,15 @@ describe('Game', function() {
     });
 
     it('should have a currentRound property that returns the current round', function() {
+        // By running this test, it will actually start the game in order to
+        // check the current round. Feel free to exit the process.
+
         const game = new Game();
         const cards = game.generateCards();
         const deck = game.createDeck(cards);
 
-        expect(game.currentRound).to.deep.equal(game.startNewRound(deck));
+        game.start();
+
+        expect(game.currentRound).is.an.instanceOf(Round);
     });
 })
